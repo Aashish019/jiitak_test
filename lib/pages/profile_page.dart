@@ -16,7 +16,7 @@ class ProfilePage extends StatelessWidget {
             const Text("Profile"),
             ElevatedButton(
               onPressed: () {
-                Get.to(() => const ProfileInfo(),
+                Get.to(() => ProfileInfo(),
                     transition: Transition.rightToLeftWithFade);
               },
               child: const Text("edit store profile information"),

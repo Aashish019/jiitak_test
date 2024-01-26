@@ -39,6 +39,7 @@ dependencies:
   easy_date_timeline: ^1.0.4
   flutter_svg: ^2.0.9
   persistent_bottom_nav_bar: ^5.0.2
+  image_picker: ^1.0.7
   
 
 dev_dependencies:

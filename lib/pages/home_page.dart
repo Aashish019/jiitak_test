@@ -83,7 +83,6 @@ class HomePage extends StatelessWidget {
             ],
             currentIndex: homePageController.selectedIndex.value,
             onTap: (int index) {
-              print(index);
               homePageController.selectedIndex.value = index;
             }),
       ),

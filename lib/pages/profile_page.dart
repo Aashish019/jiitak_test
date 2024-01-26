@@ -23,7 +23,7 @@ class ProfilePage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Get.to(() => const StampPage(),
+                Get.to(() => StampPage(),
                     transition: Transition.rightToLeftWithFade);
               },
               child: const Text("Stamp details"),

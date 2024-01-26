@@ -2,9 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:jiitak_test/controller/stamp_controller.dart';
 
 class StampPage extends StatelessWidget {
-  const StampPage({super.key});
+  final stampController = Get.put(StampController());
+  StampPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -137,24 +139,31 @@ class StampPage extends StatelessWidget {
                                     endIndent: 15,
                                   ),
                                   physics: const BouncingScrollPhysics(),
-                                  itemCount: 5,
+                                  itemCount:
+                                      stampController.stampDataList.length,
                                   itemBuilder: (context, index) {
-                                    return const ListTile(
+                                    return ListTile(
                                       title: Text(
-                                        "2021 / 11 / 18",
-                                        style: TextStyle(
+                                        stampController
+                                            .stampDataList[index].date
+                                            .toString(),
+                                        style: const TextStyle(
                                             fontSize: 12,
                                             fontFamily: 'NotoSansJP',
                                             fontWeight: FontWeight.w500,
                                             color: Color(0xffB5B5B5)),
                                       ),
                                       subtitle: Text(
-                                        "スタンプを獲得しました。",
-                                        style: TextStyle(fontSize: 14),
+                                        stampController
+                                            .stampDataList[index].description
+                                            .toString(),
+                                        style: const TextStyle(fontSize: 14),
                                       ),
                                       trailing: Text(
-                                        "1 個",
-                                        style: TextStyle(
+                                        stampController
+                                            .stampDataList[index].ltext
+                                            .toString(),
+                                        style: const TextStyle(
                                             fontFamily: 'NotoSansJP',
                                             fontWeight: FontWeight.w700,
                                             fontSize: 14),

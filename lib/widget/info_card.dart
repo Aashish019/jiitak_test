@@ -23,6 +23,7 @@ class InfoCard extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.only(left: 25.0, right: 25.0, bottom: 25.0),
           child: Container(
+              // padding: const EdgeInsets.all(1),
               height: MediaQuery.of(context).size.height * 0.45,
               decoration: const BoxDecoration(
                 boxShadow: [BoxShadow()],
@@ -44,7 +45,7 @@ class InfoCard extends StatelessWidget {
                               topRight: Radius.circular(15)),
                           image: DecorationImage(
                             fit: BoxFit.cover,
-                            image: NetworkImage(searchController
+                            image: AssetImage(searchController
                                 .jobDataList[index - 1].imageUrl
                                 .toString()),
                           ),
